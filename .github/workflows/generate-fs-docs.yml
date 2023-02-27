@@ -25,7 +25,7 @@ jobs:
   build:
     name: "Build/push & deploy to swarm"
     # The type of runner that the job will run on
-    uses: signalwire/actions-template/.github/workflows/docker-bp.yml@aa238ed82bd7adfc3ff976770df5d3eaf52b11d7
+    uses: signalwire/actions-template/.github/workflows/docker-bp.yml@48a8af26d47bae27533523e6d6bb793cad8c5226
     with:
       PROJECT_NAME: "freeswitch-docs"
       SWARM_SERVICE: "signalwire-docs_freeswitch-docs"
