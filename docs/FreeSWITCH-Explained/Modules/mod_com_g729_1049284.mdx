@@ -26,8 +26,8 @@ You should make sure that [mod\_g729](mod_g729_3375549.mdx#about) is not loaded 
 ```xml
 cd /tmp
 apt-get install unzip
-wget files.freeswitch.org/g729/fs-latest-installer-v1.6
-chmod +x fs-latest-installer-v1.6 
+wget files.freeswitch.org/g729/fs-latest-installer
+chmod +x fs-latest-installer
 ./fs-latest-installer-v1.6 /usr /usr/lib/freeswitch/mod
 /usr/bin/freeswitch-license-validator
 unzip licences.zip
@@ -35,7 +35,7 @@ unzip licences.zip
 cp <HEX-KEY>.conf /etc/freeswitch/   # <--- must be "/etc/freeswitch" for its a hard coded path freeswitch_licence server will search
 
 systemctl stop freeswitch
-freeswitch-licence-server 
+freeswitch-licence-server [need local of server]
 systemctl start freeswitch
 fs_cli -x "load mod_com_g729"
 fs_cli -x "g729_info"
